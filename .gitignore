@@ -1,41 +1,103 @@
-﻿# Python
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
 venv/
 ENV/
+env/
 .venv
-# Environment variables
-.env
-.env.local
-# Data
-data/raw/*
-data/processed/*
-data/embeddings/*
-!data/raw/.gitkeep
-!data/processed/.gitkeep
-!data/embeddings/.gitkeep
-# AWS
-.aws/
-*.pem
+
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb
-# Models
-models/
-*.pkl
-*.h5
-*.pt
-# Logs
-logs/
-*.log
-# MacOS
+*~
 .DS_Store
+
+# Environment variables (IMPORTANT - Never commit API keys!)
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Data files (don't commit large data files)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/embeddings/*
+!data/embeddings/.gitkeep
+data/analytics/*.json
+!data/analytics/.gitkeep
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+*.pid
+*.seed
+*.pid.lock
+
+# Test coverage
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# pyenv
+.python-version
+
+# AWS
+.aws/
+*.pem
+
+# Docker
+docker-compose.override.yml
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Project specific
+final_structure.txt
+phase5_test.log
+*.pyc
+
+# Keep empty directories
+!.gitkeep

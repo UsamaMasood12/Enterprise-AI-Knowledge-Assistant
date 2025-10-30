@@ -1,0 +1,93 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Enterprise AI Assistant - Serverless API
+
+Globals:
+  Function:
+    Timeout: 300
+    MemorySize: 1024
+    Runtime: python3.10
+    Environment:
+      Variables:
+        OPENAI_API_KEY: !Ref OpenAIAPIKey
+        AWS_S3_BUCKET: !Ref S3Bucket
+
+Parameters:
+  OpenAIAPIKey:
+    Type: String
+    Description: OpenAI API Key
+    NoEcho: true
+  
+  S3Bucket:
+    Type: String
+    Description: S3 Bucket for document storage
+    Default: enterprise-ai-assistant-docs
+
+Resources:
+  # API Gateway
+  EnterpriseAIAPI:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: prod
+      Cors:
+        AllowMethods: "'*'"
+        AllowHeaders: "'*'"
+        AllowOrigin: "'*'"
+
+  # Lambda Function
+  APIFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: enterprise-ai-assistant-api
+      CodeUri: ../../
+      Handler: src.api.lambda_handler.lambda_handler
+      Description: Enterprise AI Assistant API Lambda
+      Policies:
+        - S3CrudPolicy:
+            BucketName: !Ref S3Bucket
+        - Statement:
+          - Effect: Allow
+            Action:
+              - logs:CreateLogGroup
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Resource: '*'
+      Events:
+        ProxyApiRoot:
+          Type: Api
+          Properties:
+            RestApiId: !Ref EnterpriseAIAPI
+            Path: /
+            Method: ANY
+        ProxyApiGreedy:
+          Type: Api
+          Properties:
+            RestApiId: !Ref EnterpriseAIAPI
+            Path: /{proxy+}
+            Method: ANY
+
+  # S3 Bucket for documents
+  DocumentBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref S3Bucket
+      VersioningConfiguration:
+        Status: Enabled
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+Outputs:
+  APIUrl:
+    Description: API Gateway endpoint URL
+    Value: !Sub 'https://${EnterpriseAIAPI}.execute-api.${AWS::Region}.amazonaws.com/prod/'
+  
+  FunctionName:
+    Description: Lambda Function Name
+    Value: !Ref APIFunction
+  
+  S3BucketName:
+    Description: S3 Bucket for documents
+    Value: !Ref DocumentBucket
