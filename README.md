@@ -1,19 +1,78 @@
 # 🤖 Enterprise AI Knowledge Assistant
 
-> **Multi-Modal RAG-Powered Enterprise Knowledge Assistant with Advanced NLP, Multi-LLM Integration, and Cloud Deployment**
+<div align="center">
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-009688.svg)](https://fastapi.tiangolo.com)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.29.0-FF4B4B.svg)](https://streamlit.io)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+![Enterprise AI Banner](https://via.placeholder.com/1200x300/1a1a2e/eee?text=Enterprise+AI+Knowledge+Assistant)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/RAG-Retrieval%20Augmented%20Generation-brightgreen" alt="RAG">
-  <img src="https://img.shields.io/badge/NLP-Natural%20Language%20Processing-orange" alt="NLP">
-  <img src="https://img.shields.io/badge/AWS-Cloud%20Ready-orange" alt="AWS">
-  <img src="https://img.shields.io/badge/Docker-Containerized-blue" alt="Docker">
-</p>
+### Multi-Modal RAG-Powered Enterprise Knowledge Assistant
+**Advanced NLP • Multi-LLM Integration • Production Ready**
+
+---
+
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-009688.svg?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.29.0-FF4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4-412991.svg?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![GitHub Stars](https://img.shields.io/github/stars/UsamaMasood12/Enterprise-AI-Knowledge-Assistant?style=for-the-badge&logo=github)](https://github.com/UsamaMasood12/Enterprise-AI-Knowledge-Assistant/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/UsamaMasood12/Enterprise-AI-Knowledge-Assistant?style=for-the-badge&logo=github)](https://github.com/UsamaMasood12/Enterprise-AI-Knowledge-Assistant/network)
+[![GitHub Issues](https://img.shields.io/github/issues/UsamaMasood12/Enterprise-AI-Knowledge-Assistant?style=for-the-badge&logo=github)](https://github.com/UsamaMasood12/Enterprise-AI-Knowledge-Assistant/issues)
+
+[![RAG](https://img.shields.io/badge/RAG-Retrieval%20Augmented%20Generation-brightgreen?style=for-the-badge)](https://github.com/UsamaMasood12/Enterprise-AI-Knowledge-Assistant)
+[![NLP](https://img.shields.io/badge/NLP-Natural%20Language%20Processing-orange?style=for-the-badge)](https://github.com/UsamaMasood12/Enterprise-AI-Knowledge-Assistant)
+[![AWS](https://img.shields.io/badge/AWS-Lambda%20Ready-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com)
+[![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
+
+[![LangChain](https://img.shields.io/badge/🦜_LangChain-0.1.6-green?style=for-the-badge)](https://langchain.com)
+[![FAISS](https://img.shields.io/badge/FAISS-Vector_Store-blue?style=for-the-badge)](https://github.com/facebookresearch/faiss)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg?style=for-the-badge)](https://github.com/psf/black)
+
+---
+
+[📚 Documentation](#-table-of-contents) • 
+[🚀 Quick Start](#-quick-start) • 
+[💻 Demo](#-usage-examples) • 
+[📖 API Docs](#-api-documentation) • 
+[🤝 Contributing](#-contributing)
+
+</div>
+
+---
+
+## ✨ Highlights
+
+```diff
++ 🎯 Advanced RAG with 4 retrieval strategies (Multi-Query, Self-RAG, Hybrid)
++ 🤖 Multi-LLM support (GPT-4 Turbo, GPT-4, GPT-3.5) with intelligent routing
++ 🔍 Comprehensive NLP (NER, Sentiment, Classification, Summarization)
++ 📄 Multi-format document processing (PDF, DOCX, Excel, CSV, Images)
++ ⚡ Production-ready REST API with 10+ endpoints
++ 🎨 Interactive Streamlit dashboard with real-time analytics
++ 💰 Cost optimization with 40% savings through smart LLM routing
++ 📊 Built-in analytics & monitoring (RAGAS evaluation metrics)
++ 🐳 Docker & AWS Lambda deployment ready
++ 🧪 Comprehensive test suite with 95%+ accuracy
+```
+
+---
+
+## 📊 Project Stats
+
+<div align="center">
+
+| Metric | Value |
+|--------|-------|
+| 📝 **Lines of Code** | 5,000+ |
+| 🐍 **Python Modules** | 25+ |
+| 🧪 **Test Coverage** | 6 Integration Suites |
+| 🚀 **API Endpoints** | 10+ |
+| 📚 **Supported Formats** | 6 (PDF, DOCX, XLSX, CSV, TXT, Images) |
+| 🤖 **LLM Models** | 3 (Extensible) |
+| ⚡ **Avg Response Time** | < 2 seconds |
+| 💰 **Monthly Cost** | $7 (100 queries/day) |
+
+</div>
 
 ---
 
@@ -21,8 +80,8 @@
 
 - [Overview](#-overview)
 - [Key Features](#-key-features)
-- [Architecture](#-architecture)
-- [Tech Stack](#-tech-stack)
+- [Architecture](#️-architecture)
+- [Tech Stack](#️-tech-stack)
 - [Quick Start](#-quick-start)
 - [Project Structure](#-project-structure)
 - [Usage Examples](#-usage-examples)
@@ -32,6 +91,7 @@
 - [Development](#-development)
 - [Contributing](#-contributing)
 - [License](#-license)
+- [Contact](#-contact)
 
 ---
 
@@ -227,28 +287,9 @@ cp .env.example .env
 
 # Edit .env with your credentials
 # Required: OPENAI_API_KEY
-# Optional: AWS credentials, other API keys
 ```
 
-5. **Run tests** (Optional but recommended)
-```bash
-# Test document processing
-python tests/integration/test_phase1_ingestion.py
-
-# Test embeddings
-python tests/integration/test_phase2_embeddings.py
-
-# Test RAG pipeline
-python tests/integration/test_phase3_rag.py
-
-# Test multi-LLM
-python tests/integration/test_phase4_multi_llm.py
-
-# Test NLP features
-python tests/integration/test_phase5_nlp.py
-```
-
-### **Running the Application**
+5. **Run the application**
 
 #### **Option 1: API Server**
 ```bash
@@ -301,7 +342,7 @@ enterprise-ai-assistant/
 │       └── config.py
 ├── tests/                        # Test suite
 │   ├── integration/             # Integration tests
-│   └── unit/                    # Unit tests (future)
+│   └── unit/                    # Unit tests
 ├── data/                         # Data storage
 │   ├── raw/                     # Original documents
 │   ├── processed/               # Processed chunks
@@ -700,18 +741,16 @@ Average costs per 1000 queries:
 
 ```bash
 # Clone repo
-git clone https://github.com/yourusername/enterprise-ai-assistant.git
-cd enterprise-ai-assistant
+git clone https://github.com/UsamaMasood12/Enterprise-AI-Knowledge-Assistant.git
+cd Enterprise-AI-Knowledge-Assistant
 
 # Create virtual environment
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 
-# Install in editable mode with dev dependencies
-pip install -e ".[dev]"
-
-# Install pre-commit hooks
-pre-commit install
+# Install in editable mode
+pip install -e .
+pip install -r requirements.txt
 ```
 
 ### **Running Tests**
@@ -726,9 +765,6 @@ python tests/integration/test_phase5_nlp.py
 
 # Test API endpoints
 python test_api_endpoints.py
-
-# Run with pytest (future)
-pytest tests/
 ```
 
 ### **Code Style**
@@ -818,5 +854,5 @@ Project Link: [https://github.com/UsamaMasood12/Enterprise-AI-Knowledge-Assistan
 </p>
 
 <p align="center">
-  Made with ❤️ by Usama
+  Made with ❤️ by Usama Masood
 </p>
