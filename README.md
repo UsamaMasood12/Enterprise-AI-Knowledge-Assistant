@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Enterprise AI Banner](https://via.placeholder.com/1200x300/1a1a2e/eee?text=Enterprise+AI+Knowledge+Assistant)
+![Enterprise AI Banner](https://dummyimage.com/1200x300/1a1a2e/ffffff&text=Enterprise+AI+Knowledge+Assistant)
 
 ### Multi-Modal RAG-Powered Enterprise Knowledge Assistant
 **Advanced NLP • Multi-LLM Integration • Production Ready**
